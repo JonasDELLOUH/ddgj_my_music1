@@ -6,6 +6,7 @@ import 'package:just_audio/just_audio.dart';
 class MusicPlayer extends StatefulWidget {
   late SongInfo songInfo;
   Function changeTrack;
+
   @override
   final GlobalKey<MusicPlayerState> key;
   MusicPlayer({required this.songInfo, required this.changeTrack, required this.key}) : super(key: key);
@@ -54,7 +55,7 @@ class MusicPlayerState extends State<MusicPlayer> {
 
   void changeStatus() {
     setState(() {
-      isPlaying = !isPlaying;
+      isPlaying =! isPlaying;
     });
     if(isPlaying) {
       player.play();
@@ -148,7 +149,7 @@ class MusicPlayerState extends State<MusicPlayer> {
                   ),
                   GestureDetector(
                     child: const Icon(
-                      Icons.skip_previous,
+                      Icons.skip_next,
                       color: Colors.black, size: 55,),
                     behavior: HitTestBehavior.translucent,
                     onTap: () {

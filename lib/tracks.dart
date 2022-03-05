@@ -41,6 +41,11 @@ class _TracksState extends State<Tracks> {
         }
       }
     }
+    else {
+      if(currentIndex >= songs.length) {
+        currentIndex --;
+      }
+    }
 
     key.currentState?.setSong(songs[currentIndex]);
   }
